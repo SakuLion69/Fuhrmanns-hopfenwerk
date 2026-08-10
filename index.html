@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuhrmanns Hopfenwerk | Traditionelle Brauerei</title>
+    <style>
+        :root {
+            --bg-dark: #121212;
+            --card-bg: #1e1e1e;
+            --accent-gold: #d4af37;
+            --text-light: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --border-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #0a0a0a;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 2px solid var(--accent-gold);
+        }
+
+        header h1 {
+            color: var(--accent-gold);
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        nav {
+            background-color: #161616;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            color: var(--accent-gold);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #252525;
+            color: var(--accent-gold);
+        }
+
+        tr:hover {
+            background-color: #282828;
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .recipe-card {
+            background-color: #252525;
+            padding: 1.2rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .recipe-card h3 {
+            margin-top: 0;
+            color: var(--accent-gold);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #0a0a0a;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fuhrmanns Hopfenwerk</h1>
+        <p>Traditionelles Brauhandwerk & Feinste Bierspezialitäten</p>
+    </header>
+
+    <nav>
+        <a href="#about">Über Uns</a>
+        <a href="#sorten">Biersorten & Preise</a>
+        <a href="#herstellung">Herstellung & Rezepte</a>
+        <a href="#kontakt">Kontakt & Anfahrt</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- Über Uns -->
+        <section id="about" class="card">
+            <h2>Willkommen im Hopfenwerk</h2>
+            <p>Willkommen bei <strong>Fuhrmanns Hopfenwerk</strong>. Wir brauen unser Bier nach traditioneller Rezeptur und mit besten Zutaten. Ob frisches Fassbier für Events oder edles Flaschenbier für den Genuss zwischendurch – bei uns steht Qualität an erster Stelle.</p>
+        </section>
+
+        <!-- Biersorten & Preise -->
+        <section id="sorten" class="card">
+            <h2>Unsere Biersorten & Preisliste</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produkt</th>
+                        <th>Kategorie</th>
+                        <th>Einheit</th>
+                        <th>Preis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hopfenwerk Spezial</td>
+                        <td>Fassbier</td>
+                        <td>Fass (50 Lit)</td>
+                        <td>120,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Landbier Premium</td>
+                        <td>Flaschenbier</td>
+                        <td>Kiste (20 Flaschen)</td>
+                        <td>18,50 €</td>
+                    </tr>
+                    <tr>
+                        <td>Dunkles Bockbier</td>
+                        <td>Spezialbier</td>
+                        <td>Fass (30 Lit)</td>
+                        <td>85,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Stout Reserve</td>
+                        <td>Flaschenbier</td>
+                        <td>Einzelflasche (0.5L)</td>
+                        <td>2,50 €</td>
+                    </tr>
+                    <tr>
+                        <td>Weizenbier Naturtrüb</td>
+                        <td>Flaschenbier</td>
+                        <td>Kiste (20 Flaschen)</td>
+                        <td>19,00 €</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Herstellung & Rezepte -->
+        <section id="herstellung" class="card">
+            <h2>Herstellung & Brauprozess</h2>
+            <p>Ein Einblick in die Verarbeitung unserer Rohstoffe:</p>
+            <div class="recipe-grid">
+                <div class="recipe-card">
+                    <h3>Hopfenwerk Spezial</h3>
+                    <p><strong>Zutaten:</strong> 5kg Malz, 200g Aroma-Hopfen, 40L Wasser, Reinzuchthefe.</p>
+                    <p><strong>Brauzeit:</strong> 4 Wochen Reifezeit im Eichenfass.</p>
+                </div>
+                <div class="recipe-card">
+                    <h3>Landbier Premium</h3>
+                    <p><strong>Zutaten:</strong> 3kg Braumalz, 100g Hopfen, 20L Quellwasser.</p>
+                    <p><strong>Brauzeit:</strong> 3 Wochen kühle Gärung.</p>
+                </div>
+                <div class="recipe-card">
+                    <h3>Dunkles Bockbier</h3>
+                    <p><strong>Zutaten:</strong> 6kg Röstmalz, 150g Stark-Hopfen, 25L Wasser.</p>
+                    <p><strong>Brauzeit:</strong> 6 Wochen traditionelle Lagerung.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontakt & Anfahrt -->
+        <section id="kontakt" class="card">
+            <h2>Bestellung & Kontakt</h2>
+            <div class="contact-info">
+                <div>
+                    <p><strong>Inhaber:</strong> Fuhrmann</p>
+                    <p><strong>Telefon (RP):</strong> 0606985885</p>
+                    <p><strong>Standort:</strong> Brauerei Hopfenwerk</p>
+                </div>
+                <div>
+                    <p>Bestellungen nehmen wir gerne telefonisch oder direkt vor Ort entgegen!</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Fuhrmanns Hopfenwerk. Alle Rechte vorbehalten.</p>
+    </footer>
+
+</body>
+</html>
