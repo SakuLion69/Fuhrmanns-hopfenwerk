@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fuhrmanns Hopfenwerk | Traditionelle Brauerei</title>
+    <title>Fuhrmanns Hopfenwerk | Brauerei & Sortenübersicht</title>
     <style>
         :root {
             --bg-dark: #121212;
@@ -25,7 +26,7 @@
 
         header {
             background-color: #0a0a0a;
-            padding: 2rem 1rem;
+            padding: 2.5rem 1rem;
             text-align: center;
             border-bottom: 2px solid var(--accent-gold);
         }
@@ -66,7 +67,7 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 2rem auto;
             padding: 0 1rem;
         }
@@ -87,51 +88,61 @@
             margin-top: 0;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-
-        th, td {
-            padding: 0.75rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        th {
-            background-color: #252525;
-            color: var(--accent-gold);
-        }
-
-        tr:hover {
-            background-color: #282828;
-        }
-
-        .recipe-grid {
+        .beer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1.5rem;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
 
-        .recipe-card {
+        .beer-card {
             background-color: #252525;
-            padding: 1.2rem;
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--accent-gold);
             border-radius: 6px;
-            border-left: 4px solid var(--accent-gold);
+            padding: 1.2rem;
         }
 
-        .recipe-card h3 {
+        .beer-card h3 {
             margin-top: 0;
             color: var(--accent-gold);
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
         }
 
-        .contact-info {
+        .ingredient-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 1rem 0;
+            font-size: 0.95rem;
+        }
+
+        .ingredient-list li {
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
+            padding: 0.3rem 0;
+            border-bottom: 1px dashed #333;
+        }
+
+        .yield-box {
+            background-color: #1a1a1a;
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            text-align: center;
+            font-weight: bold;
+            padding: 0.5rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+
+        .notice-box {
+            background-color: #1a1a1a;
+            border-left: 4px solid var(--accent-gold);
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
         }
 
         footer {
@@ -148,14 +159,14 @@
 
     <header>
         <h1>Fuhrmanns Hopfenwerk</h1>
-        <p>Traditionelles Brauhandwerk & Feinste Bierspezialitäten</p>
+        <p>Handgebraut & Legendär – Offizielle Sorten- & Rezeptübersicht</p>
     </header>
 
     <nav>
         <a href="#about">Über Uns</a>
-        <a href="#sorten">Biersorten & Preise</a>
-        <a href="#herstellung">Herstellung & Rezepte</a>
-        <a href="#kontakt">Kontakt & Anfahrt</a>
+        <a href="#sorten">Biersorten & Rezepte</a>
+        <a href="#richtlinien">Richtlinien</a>
+        <a href="#kontakt">Kontakt</a>
     </nav>
 
     <div class="container">
@@ -163,92 +174,96 @@
         <!-- Über Uns -->
         <section id="about" class="card">
             <h2>Willkommen im Hopfenwerk</h2>
-            <p>Willkommen bei <strong>Fuhrmanns Hopfenwerk</strong>. Wir brauen unser Bier nach traditioneller Rezeptur und mit besten Zutaten. Ob frisches Fassbier für Events oder edles Flaschenbier für den Genuss zwischendurch – bei uns steht Qualität an erster Stelle.</p>
+            <p>Bei <strong>Fuhrmanns Hopfenwerk</strong> stellen wir vier besondere Biersorten aus den besten Zutaten im Verarbeitungsschritt her. Qualität, Sauberkeit und höchste Braustandards stehen bei uns an erster Stelle.</p>
         </section>
 
-        <!-- Biersorten & Preise -->
+        <!-- Biersorten & Rezepte -->
         <section id="sorten" class="card">
-            <h2>Unsere Biersorten & Preisliste</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Produkt</th>
-                        <th>Kategorie</th>
-                        <th>Einheit</th>
-                        <th>Preis</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Hopfenwerk Spezial</td>
-                        <td>Fassbier</td>
-                        <td>Fass (50 Lit)</td>
-                        <td>120,00 €</td>
-                    </tr>
-                    <tr>
-                        <td>Landbier Premium</td>
-                        <td>Flaschenbier</td>
-                        <td>Kiste (20 Flaschen)</td>
-                        <td>18,50 €</td>
-                    </tr>
-                    <tr>
-                        <td>Dunkles Bockbier</td>
-                        <td>Spezialbier</td>
-                        <td>Fass (30 Lit)</td>
-                        <td>85,00 €</td>
-                    </tr>
-                    <tr>
-                        <td>Stout Reserve</td>
-                        <td>Flaschenbier</td>
-                        <td>Einzelflasche (0.5L)</td>
-                        <td>2,50 €</td>
-                    </tr>
-                    <tr>
-                        <td>Weizenbier Naturtrüb</td>
-                        <td>Flaschenbier</td>
-                        <td>Kiste (20 Flaschen)</td>
-                        <td>19,00 €</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+            <h2>Herstellung unserer Biersorten</h2>
+            <div class="beer-grid">
 
-        <!-- Herstellung & Rezepte -->
-        <section id="herstellung" class="card">
-            <h2>Herstellung & Brauprozess</h2>
-            <p>Ein Einblick in die Verarbeitung unserer Rohstoffe:</p>
-            <div class="recipe-grid">
-                <div class="recipe-card">
-                    <h3>Hopfenwerk Spezial</h3>
-                    <p><strong>Zutaten:</strong> 5kg Malz, 200g Aroma-Hopfen, 40L Wasser, Reinzuchthefe.</p>
-                    <p><strong>Brauzeit:</strong> 4 Wochen Reifezeit im Eichenfass.</p>
+                <!-- Altstadt Pils -->
+                <div class="beer-card">
+                    <h3>Altstadt Pils</h3>
+                    <ul class="ingredient-list">
+                        <li><span>Getreidesack (Gerste) 150kg</span> <strong>1</strong></li>
+                        <li><span>Malz (5kg Sack)</span> <strong>10</strong></li>
+                        <li><span>Hopfen (5kg Sack)</span> <strong>16</strong></li>
+                        <li><span>Hefe</span> <strong>4</strong></li>
+                        <li><span>Quellwasser</span> <strong>125</strong></li>
+                        <li><span>Leere Bierflasche</span> <strong>35</strong></li>
+                    </ul>
+                    <div class="yield-box">Ergibt: 35 Flaschen</div>
                 </div>
-                <div class="recipe-card">
-                    <h3>Landbier Premium</h3>
-                    <p><strong>Zutaten:</strong> 3kg Braumalz, 100g Hopfen, 20L Quellwasser.</p>
-                    <p><strong>Brauzeit:</strong> 3 Wochen kühle Gärung.</p>
+
+                <!-- Bürgermeister Bock -->
+                <div class="beer-card">
+                    <h3>Bürgermeister Bock</h3>
+                    <ul class="ingredient-list">
+                        <li><span>Getreidesack (Dinkel) 150kg</span> <strong>1</strong></li>
+                        <li><span>Malz (5kg Sack)</span> <strong>28</strong></li>
+                        <li><span>Hopfen (5kg Sack)</span> <strong>14</strong></li>
+                        <li><span>Hefe</span> <strong>6</strong></li>
+                        <li><span>Quellwasser</span> <strong>125</strong></li>
+                        <li><span>Leere Bierflasche</span> <strong>35</strong></li>
+                    </ul>
+                    <div class="yield-box">Ergibt: 35 Flaschen</div>
                 </div>
-                <div class="recipe-card">
-                    <h3>Dunkles Bockbier</h3>
-                    <p><strong>Zutaten:</strong> 6kg Röstmalz, 150g Stark-Hopfen, 25L Wasser.</p>
-                    <p><strong>Brauzeit:</strong> 6 Wochen traditionelle Lagerung.</p>
+
+                <!-- Chili-Citrus Craftbier -->
+                <div class="beer-card">
+                    <h3>Chili-Citrus Craftbier</h3>
+                    <ul class="ingredient-list">
+                        <li><span>Getreidesack (Hartweizen) 150kg</span> <strong>1</strong></li>
+                        <li><span>Malz (5kg Sack)</span> <strong>12</strong></li>
+                        <li><span>Hopfen (5kg Sack)</span> <strong>18</strong></li>
+                        <li><span>Hefe</span> <strong>5</strong></li>
+                        <li><span>Quellwasser</span> <strong>110</strong></li>
+                        <li><span>Chilischote</span> <strong>16</strong></li>
+                        <li><span>Limonenöl</span> <strong>4</strong></li>
+                        <li><span>Koriander</span> <strong>4</strong></li>
+                        <li><span>Leere Bierflasche</span> <strong>35</strong></li>
+                    </ul>
+                    <div class="yield-box">Ergibt: 35 Flaschen</div>
                 </div>
+
+                <!-- Dinkel Spezial -->
+                <div class="beer-card">
+                    <h3>Dinkel Spezial</h3>
+                    <ul class="ingredient-list">
+                        <li><span>Getreidesack (Dinkel) 150kg</span> <strong>1</strong></li>
+                        <li><span>Malz (5kg Sack)</span> <strong>11</strong></li>
+                        <li><span>Hopfen (5kg Sack)</span> <strong>9</strong></li>
+                        <li><span>Hefe</span> <strong>5</strong></li>
+                        <li><span>Quellwasser</span> <strong>125</strong></li>
+                        <li><span>Leere Bierflasche</span> <strong>35</strong></li>
+                    </ul>
+                    <div class="yield-box">Ergibt: 35 Flaschen</div>
+                </div>
+
             </div>
         </section>
 
-        <!-- Kontakt & Anfahrt -->
+        <!-- Richtlinien -->
+        <section id="richtlinien" class="card">
+            <h2>Allgemeine Richtlinien & Hinweise</h2>
+            <div class="notice-box">
+                <p><strong>Hinweise:</strong></p>
+                <ul>
+                    <li>Alle Mengenangaben beziehen sich auf eine Brauscharge.</li>
+                    <li>Getreideverarbeitung pro Person pro Tag: maximal 200 Säcke.</li>
+                    <li>Nur hochwertige Rohstoffe verwenden.</li>
+                    <li>Sauberkeit und Hygienestandards strikt einhalten.</li>
+                    <li>Gärung und Lagerung kontrollieren und dokumentieren.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Kontakt -->
         <section id="kontakt" class="card">
             <h2>Bestellung & Kontakt</h2>
-            <div class="contact-info">
-                <div>
-                    <p><strong>Inhaber:</strong> Fuhrmann</p>
-                    <p><strong>Telefon (RP):</strong> 0606985885</p>
-                    <p><strong>Standort:</strong> Brauerei Hopfenwerk</p>
-                </div>
-                <div>
-                    <p>Bestellungen nehmen wir gerne telefonisch oder direkt vor Ort entgegen!</p>
-                </div>
-            </div>
+            <p>Bestellungen und Anfragen für Sonderchargen nehmen wir gerne entgegen.</p>
+            <p><strong>Inhaber:</strong> Fuhrmanns Hopfenwerk</p>
         </section>
 
     </div>
